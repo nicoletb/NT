@@ -1,0 +1,19 @@
+{% extends 'base/base.html' %}
+{% block content %}
+
+<body>
+<section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">Armando Ruiz</h1>
+            <p class="lead text-muted">Hola, mi nombre es Armando y disfruto el desarrollo de aplicaciones y explorar
+                nuevas tecnologías.</p>
+            <p>
+                <a href="mailto:armando.eu.ruiz@gmail.com" class="btn btn-primary my-2">Contactame</a>
+            </p>
+            <img src="{{ url_for('static',filename='img/armando.png')}}" height=300></img>
+        </div>
+    </section>
+</body>
+
+
+{% endblock %}

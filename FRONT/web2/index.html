@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <title>Formulario</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div class="formulario">
+        <form method="POST" action="respuesta.html">
+            Año: <input type="text" name="anio" id="anio" placeholder="Ingresa el año" required/> 
+            <br/><br/>
+            Género: <input type="radio" name="genero" value="M" maxlength="4"/> Masculino
+            <input type="radio" name="genero" value="F"/> Femenino 
+            <br/><br/>
+            ¿Cuál es tu grado de instrucción? <br/>
+            <input type="radio" name="grado" value="Colegio" checked/> Colegio <br/>
+            <input type="radio" name="grado" value="Superior"/> Superior
+            <br/><br/>
+            Selecciona tu tipo de música favorita: </br>
+            <input type="radio" name="musica" value="Rock"/> Rock </br>
+            <input type="radio" name="musica" value="Salsa"/> Salsa </br>
+            <input type="radio" name="musica" value="Reggaeton"/> Reggaeton 
+            <br/><br/>
+            Selecciona tus frutas favoritas: <br/>
+            <input type="checkbox" name="fruta[]" value="Fresa"/> Fresa <br/>
+            <input type="checkbox" name="fruta[]" value="Uva"/> Uva <br/>
+            <input type="checkbox" name="fruta[]" value="Sandía"/> Sandía 
+            <br/><br/>
+            Selecciona tus colores favoritos: <br/>
+            <input type="checkbox" name="color[]" value="Azul"/> Azul <br/>
+            <input type="checkbox" name="color[]" value="Verde"/> Verde <br/>
+            <input type="checkbox" name="color[]" value="Negro"/> Negro
+            <br/><br/>
+            Selecciona el tipo de transporte que usas más:
+            <select>
+                <option value="1">Bus</option>
+                <option value="2">Taxi</option>
+                <option value="3" selected>Auto</option>
+            </select>
+            <br/><br/>
+            Ingresa un comentario: <br/>
+            <textarea name="comentario" placeholder="Escribe..." maxlength="10"></textarea>
+            <br/><br/>
+            <input type="submit" value="Envía tus respuestas"/> 
+        </form>
+    </div>
+</body>
+</html>

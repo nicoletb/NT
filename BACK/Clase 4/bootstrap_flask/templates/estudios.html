@@ -1,0 +1,28 @@
+{% extends 'base/base.html' %}
+{% block content %}
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+</head>
+
+<div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                {% for skill in skills %}
+                <div class="col-md-4">
+                    <a href="">
+                        <div class="card mb-4 shadow-sm">
+                            <img class='card-img-top' src="{{ url_for('static', filename='') }}{{ skill.imagen }}">
+                            <div class="card-body">
+                                <p class="card-text">{{ skill.curso }}.</p>
+                                <p class="card-text">{{ skill.descripcion }}.</p>
+                                <p class="card-text">{{ skill.nivel }}.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

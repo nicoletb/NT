@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    margin: 0;
+    font-size: 14px;
+    background-color: #034078;
+}
+
+header #menu {
+    background-color: #1282A2;
+    padding: 20px 12px 10px 12px;
+    color: #FEFCFB;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+header #menu a{
+    color: #FEFCFB;
+}
+
+header #banner {
+    background: yellow;
+    background-image: url("../img/banner1.jpg");
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+}
+
+header #banner #proximo{
+    text-align: center;
+    padding-top: 250px;
+    font-size: 46px;
+    font-weight: bold;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+#principal {
+    clear: both;
+}
+
+#principal #contenedor {
+    width: 1140px;
+    background: red;
+    margin: 0 auto;
+}
+
+#principal #contenido {
+    margin-bottom: 20px;
+    float: left;
+}
+
+#principal #Contenido .titulo {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 5px 0 10px 0;
+    color: #FEFCFB;
+}
+
+#principal #contenido .cuadro{
+    width: 204px;
+    text-align: center;
+    display: inline-block;
+    }
+
+#principal #contenido .cuadro .titulo{
+    font-size: 18px;
+    color: #0A1128;
+}    
+
+#principal #contenido img{
+    border-radius: 10px;
+}
+
+#principal #lateral{
+	float: right;
+	width: 300px;
+	margin-top: 20px;
+}
+#principal #lateral .tit_lateral {
+	background: #001F54;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 20px;
+	text-align: center;
+	padding: 7px 4px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    clear: both;
+}
+
+#principal #lateral .cuadro_lat {
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+#principal #lateral .cuadro_lat .detalle {
+    margin-left: 10px;
+}
+
+#principal #lateral .cuadro_lat .detalle h3 {
+    color: #FEFCFB;
+    margin: 6px 0;
+}
+
+#principal #lateral .cuadro_lat .detalle .calificacion {
+    color: #1282A2
+}
+
+#principal #lateral .cuadro_lat .detalle .calificacion span {
+    font-size: 17px;
+}
+
+#principal #lateral .cuadro_lat .info {
+    float: left;
+}
+
+footer {
+    clear: both;
+    background: #000000;
+    color: #FFF;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+}
+

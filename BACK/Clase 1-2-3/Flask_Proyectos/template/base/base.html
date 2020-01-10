@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+    <title>Mi Portafolio Personal</title>
+</head>
+<body>
+   <p>Bienvenido a Mi Portafolio Personal</p>
+    {% block content %}
+    {% endblock %}
+</body>
+<footer>
+    <div class="container">
+        <div class="row">
+            <p class="copyright text-muted">CodiGo-Tecsup</p>
+        </div>
+    </div>
+</footer>
+<img src=" {{url_for('static',filename='img/python.png') }}">
+</html>

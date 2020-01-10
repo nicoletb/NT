@@ -1,0 +1,80 @@
+body {
+    background-color: #3598DB;
+    font-family: arial;
+}
+
+form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+form #box {
+    border: 4px solid;
+    border-color: #3085b9;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+    background: white;
+    width: 300px;
+    height: 225px;
+}
+
+#user {
+    height: 80px;
+    width: 80px;
+    background: url("../img/user.jpg");
+    background-size: cover;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    margin-left: -40px;
+    border-radius: 50px;
+    border: 4px solid #0288B8;
+}
+
+#subbox {
+    padding-top: 30px;
+}
+
+#title {
+    color: #54534F;
+    font-weight: bold;
+    padding: 0 0 20px 0;
+    font-size: 30px;
+}
+
+.info {
+    width: calc(100% - 10px);
+    margin-bottom: 10px;
+    background: #ECF0F1;
+    border-radius: 3px;
+    padding: 6px;
+    color: #A9ADAE;
+    border: 2px solid #C8C9CB;
+}
+
+#button {
+    background: #2DCC71;
+    color: white;
+    font-weight: bold;
+    padding: 10px 40px;
+    border: 1px solid rgb(43, 163, 87);
+    border-radius: 3px;
+    margin: 15px 0 0 0;
+    font-size: 16px;
+}
+
+#forgot {
+    text-align: center;
+    padding: 15px 0 0 0;
+    font-weight: bold;
+    font-size: 11px;
+    color: white;
+}
+
+#forgot a {
+    color: rgb(226, 186, 77)
+}

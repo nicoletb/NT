@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+    <title>Formularios</title>
+</head>
+<body>
+    <form method="POST" action="">
+        <input type="email" name="correo" placeholder="Usuario"/>
+        <br/>
+        <input type="password" name="clave" placeholder="Contraseña"/>
+        <br/>
+        <input type="number" name="telf" placeholder="Celular">
+        <h4>Valores mínimos y máximos</h4>
+        <input type="number" name="dia" min="1" max="7" placeholder="Día semana"/>
+        <br/>
+        ¿Cuántos minutos de ejercicio haces diariamente?
+        <input type="number" name="minutos" value="5" min="0" max="60" step="5"/> mins
+        <br/>
+        Ingresa tu fecha de nacimiento: <br/>
+        <input type="date" name="fecnac"/> <br/>
+        Ingresa una fecha entre Enero y Febrero de este año: <br/>
+        <input type="date" name="rango" min="2020-01-01" max="2020-02-29"/> <br/>
+        <input type="submit" value="Ingresar"/>
+    </form>
+</body>
+<footer></footer>
+</html>
