@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 4</title>
+    <script>
+
+    nums = [];
+	for(i=0;i<5;i++){
+        nums.push(parseInt(prompt("Ingrese un número:")));
+	}
+	console.log(nums);
+
+	max = 0;
+	for(i=0;i<nums.length;i++){
+		if(nums[i]>max){
+			max = nums[i];
+		}
+	}
+	alert("Máximo:"+max);
+
+	min=max;
+	for(i=0;i<nums.length;i++){
+		console.log('num:'+nums[i])
+		console.log('min:'+min);
+		if(nums[i]<min){
+			console.log("el nuevo min es "+nums[i]);
+			min=nums[i];
+		}
+	}
+	alert("Mínimo:"+min);
+
+    // max = Math.max.apply(null, nums);
+    // alert("Max: "+max);
+    // min = Math.min.apply(null, nums);
+    // alert("Min: "+min);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

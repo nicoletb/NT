@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio JQuery</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="ejerciciojquery.js"></script>
+
+</head>
+<body>
+    <div id="paso1">
+        <h2>Cursos</h2>
+        <p>Selecciona un curso a estudiar:</p>
+        <p>
+            <input type="radio" id="curso1" value="Java" name="curso"/>Java <br/>
+            <input type="radio" id="curso2" value=".Net" name="curso"/>.Net <br/>
+            <input type="radio" id="curso3" value="PHP" name="curso"/>PHP
+        </p>
+        <button onclick="paso(2)">Siguiente</button>
+    </div>
+    <div id="paso2" style="display: none">
+        <h2>Módulos</h2>
+        <p>
+            <input type="checkbox" value="Básico" id="modulo1"/>Básico <br/>
+            <input type="checkbox" value="Intermedio" id="modulo2"/>Intermedio <br/>
+            <input type="checkbox" value="Avanzado" id="modulo3"/>Avanzado
+        </p>
+        <button onclick="paso(1)">Anterior</button>
+        <button onclick="paso(3)">Siguiente</button>
+
+    </div>
+    <div id="paso3" style="display: none">
+        <h2>Solicitud del Pedido</h2>
+        <p>Curso: <span id="nomCurso">Ninguno</span></p> 
+        <p>Módulos:</p>
+        <ul id="lista">
+        </ul>
+        <p>Total: S/. <span id="total">0.00</span></p>
+        <p>Pago con TC: <input type="checkbox" id="pago"/></p>
+        <p>Descuento: S/. <span id="descuento">0.00</span></p>
+        <p>Total a pagar: S/. <span id="nuevoTotal">0.00</span></p>
+        <button onclick="pagar()">Pagar</button>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Suma</title>
+        <script type="text/javascript">
+            //Declarar función llamada "sumar"
+            function sumar(){
+                alert("sumando");
+                num1 = document.getElementById("n1").value;
+                num2 = document.getElementById("n2").value;
+                total = parseInt(num1) + parseInt(num2);
+                respuesta = "La suma es "+total;
+                alert(respuesta);
+                document.getElementById("res").innerHTML = respuesta;
+            }
+        </script>
+    </head>
+    <body>    
+        Num1: <input type="text" id="n1"/> <br/>
+        Num2: <input type="text" id="n2"/> <br/>
+        <input type="button" value="Calcular" onclick="sumar()"/> <br/>
+        <p id="res"></p>
+    </body>
+</html>

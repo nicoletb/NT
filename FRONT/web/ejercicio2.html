@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Área triángulo</title>
+        <script>
+        function calcular(){
+            b = parseInt(document.getElementById("base").value);
+            h = parseInt(document.getElementById("altura").value);
+            total = (b*h*0.5);
+            respuesta = "El área del triángulo es de "+total;
+            alert(respuesta);
+            mensaje = "El valor del área del triángulo es de <strong>"+total+"</strong>";
+            document.getElementById("respuesta").innerHTML = mensaje;
+        }    
+        </script>
+    </head>
+    <body>
+        Altura h: <input type="text" id="altura"/> <br/>
+        Base b: <input type="text" id="base"/> <br/>
+        <input type="button" value="Calcular" onclick="calcular()"/>
+        <p id="respuesta"></p>
+    </body>
+</html>

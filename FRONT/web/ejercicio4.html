@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nota final</title>
+        <script>
+            function calcular(){
+                t = parseInt(document.getElementById("teoria").value);
+                p = parseInt(document.getElementById("practica").value);
+                e = parseInt(document.getElementById("examen").value);
+                error = false;
+                texto = '';                
+                console.log("nota teorica:"+t);
+                //validando con OR (||)
+                if(isNaN(t) || t<0 || t>20){
+                    texto+="El valor de la nota de teoría no es válida.";
+                    document.getElementById("teoria").value="";
+                    //Colocamos el cursor en la caja con id teoria con focus()
+                    document.getElementById("teoria").focus();
+                }
+                if(isNaN(p) || p=='' || p<0 || p>20){
+                    alert("El valor de la nota Práctica no es válida.");
+                    document.getElementById("practica").value="";
+                    document.getElementById("practica").focus();                    
+                    return;
+                }
+                if(e=='' || e<0 || e>20){
+                    alert("El valor del Examen Final no es válido.");
+                    document.getElementById("examen").value="";
+                    document.getElementById("examen").focus();                            
+                }
+                if(error){
+
+                }
+                total = t*0.3 + p*0.4 + e*0.3;
+                resultado = "La nota final es de "+total;
+                console.log(mensaje)
+                alert(resultado);
+                mensaje = "Nota final - Programación básica en JavaScript: <strong>"+total+"</strong>"
+                document.getElementById("mensaje").innerHTML = mensaje;
+            }
+        </script>
+    </head>
+    <body>
+        Nota Teoría (30%): <input type="number" min="0" max="20" maxlength="2" id="teoria"/> <br/>
+        Nota Práctica (40%): <input type="number" min="0" max="20" maxlength="2" id="practica"/> <br/>
+        Examen final (30%): <input type="number" min="0" max="20" maxlength="2" id="examen"/> <br/>
+        <input type="button" value="Calcular nota" onclick="calcular()"/>
+        <p id="mensaje"></p>  
+    </body>
+</html>

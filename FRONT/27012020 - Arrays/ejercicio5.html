@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 5</title>
+    <script>
+        sum = 0;
+        nums = [];
+	    for(i=0;i<5;i++){
+            n = nums.push(parseInt(prompt("Ingrese un número:")));
+            sum += n
+        }
+
+        prom = sum / nums.length
+
+        max = Math.max.apply(null, nums);
+        min = Math.min.apply(null, nums);
+
+        console.log("Números: "+nums);
+        console.log("Suma: "+sum);
+        console.log("Promedio: "+prom);
+        console.log("Max: "+max);
+        console.log("Min: "+min)
+
+    
+    </script>
+    
+</head>
+<body>
+    
+</body>
+</html>

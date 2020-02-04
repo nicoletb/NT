@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Banco</title>
+        <script>
+            function calcular(){
+                s = parseInt(document.getElementById("sueldo").value);
+                if(s==''){ //Cuando la caja de texto está vacía
+                    alert('¡Debes ingresar un monto!');
+                    document.getElementById("sueldo").focus();
+                }else{  //De lo contrario, cuando la caja tiene contenido
+                    r = s * 0.02;
+                }
+                rf = r.toFixed(2); //Formateamos para que siempre tenga 2 decimales
+                document.getElementById("ganancia").innerHTML = rf;
+              
+            }
+        </script>
+    </head>
+    <body>
+        Sueldo: <input type="number" id="sueldo"/> <br/>
+        Interés: 2% <br/>
+        Ganancia: S/. <span id="ganancia">0.00</span> <br/>
+        <input type="button" value="Calcular" onclick="calcular()"/>
+        <p id="razon"></p> 
+        <p id="total"></p> 
+    </body>
+</html>

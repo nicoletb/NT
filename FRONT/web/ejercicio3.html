@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Área círculo</title>
+        <script>
+            function calcular(){
+                r = parseInt(document.getElementById("radio").value);
+                pi = Math.PI;
+                total = pi * Math.pow(r,2);
+                respuesta = "El área del círculo es de "+total;
+                alert(respuesta);
+                mensaje = "El área total del círculo es de <strong>"+total+"</strong>"
+                document.getElementById("mensaje").innerHTML = mensaje;
+            }
+        </script>
+    </head>
+    <body>
+        Radio r: <input type="text" id="radio"/> <br/>
+        <input type="button" value="Calcular" onclick="calcular()"/>
+        <p id="mensaje"></p>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cine</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <div id="paso1">
+        <h2>Películas</h2>
+        <p>
+            <input type="radio" id="pelicula1" name="pelicula" value="1917"/> 1917 <br/>
+            <input type="radio" id="pelicula2" name="pelicula" value="Jojo Rabit"/> Jojo Rabit <br/>
+            <input type="radio" id="pelicula3" name="pelicula" value="Joker"/> Joker
+        </p>
+        <button onclick="paso(2)">Siguiente</button>
+    </div>
+    <div id="paso2" style="display: none">
+        <h2>Entradas</h2>
+        <p>
+            <input type="checkbox" id="entrada1" name="entrada_n" value="Ninos"/> Niños / Adulto mayor 
+            <span id="cant_nino"><input type="number" name="ent_nino" id="ent_nino"/></span> <br/>
+            <input type="checkbox" id="entrada2" name="entrada_a" value="Adultos"/> Adultos 
+            <span id="cant_adulto"><input type="number" name="ent_adulto" id="ent_adulto"/></span> <br/>
+        </p>
+        <button onclick="paso(1)">Anterior</button>
+        <button onclick="paso(3)">Siguiente</button>
+    </div>
+    <div id="paso3" style="display:none">
+        <h2>Pago</h2>
+        <p><span id="nompelicula"></span></p>
+        <div id="nino">
+            <p><span id="nino_total">0</span>Niño / Adulto mayor <span id="precio_nino"></span></p>
+        </div>
+        <div id="adulto">
+            <p><span id="adulto_total">0</span>Adulto <span id="precio_adulto"></span></p>
+        </div>
+        <div id="total">
+            <p> Total: <span id="precio_total">0.00</span></p>
+        </div>
+        <input type="button" value="Pagar"
+    </div>
+</body>
+</html>

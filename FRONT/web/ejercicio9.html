@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Almacén</title>
+        <link rel="stylesheet" type="text/css" href="estilos9.css"/>
+        <script type="text/javascript">
+        val_subtotal = 0; //acumulador del subtotal de la compra
+        function comprar(cod){
+            console.log("valor de cod:"+cod); //Armar  el id del nombre del producto según el código enviado
+            nom_prod = document.getElementById("nom_"+cod).innerHTML; //Jala el código para armar el nombre del producto según el id
+            console.log(nom_prod);
+            precio = document.getElementById("precio_"+cod).innerHTML; //Jala el código para armar el precio del producto según el id
+            console.log(precio);
+            cant = prompt("¿Qué cantidad deseas comprar de "+nom_prod+"?");
+            subtotal = precio * cant;
+            detalle = nom_prod+" x "+cant+" = "+"S/ "+subtotal.toFixed(2)+"<br/>";
+            document.getElementById("detalle").innerHTML+=detalle;
+            val_subtotal+=subtotal;
+            document.getElementById("subtotal").innerHTML=val_subtotal.toFixed(2); //Agrego contenido al div con id="venta" 
+        }
+        function pagar(){
+            if(val_subtotal>10){
+                alert("Hay descuento!");
+                total = val_subtotal*0.8;
+                descuento = val_subtotal*0.2;
+                document.getElementById("desc").innerHTML = descuento.toFixed(0);
+            }else{
+                alert("No hay descuento!");
+                total = val_subtotal;
+            }
+            document.getElementById("total").innerHTML = total.toFixed(2);
+            document.getElementById("montos").style.display = "block";
+        }
+        </script>
+    </head>
+    <body>
+        <div id="contenedor">
+            <div id="productos">
+                <table border=1>
+                    <tr>
+                        <td>Nombre</td>
+                        <td>Precio</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="nom_1">Coca Cola 500ml</td>
+                        <td>S/. <span id="precio_1">2.50</span></td>
+                        <td><button onclick="comprar(1)">Comprar</button></td>
+                    </tr>
+                    <tr>
+                        <td id="nom_2">Cheetos</td>
+                        <td>S/. <span id="precio_2">1.00</span></td>
+                        <td><button onclick="comprar(2)">Comprar</button></td>
+                    </tr>
+                    <tr>
+                        <td id="nom_3">Coronita de chocolate</td>
+                        <td>S/. <span id="precio_3">0.70</span></td>
+                        <td><button onclick="comprar(3)">Comprar</button></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="venta">
+                <h2>Venta</h2>
+                <div id="detalle"></div>
+                <p>SubTotal: S/. <span id="subtotal"></span></p>
+                <button onclick="pagar()">PAGAR</button>
+                <div id="montos" style="display:none">
+                    <p>Descuento: <span id="desc">0.00</span>%</p>
+                    <p>Total a pagar: S/. <span id="total">0.00</span></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

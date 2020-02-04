@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Banco</title>
+        <script>
+            function calcular(){
+                monto = parseInt(document.getElementById("sueldo").value);
+                interes = parseInt(document.getElementById("intereses").value);
+                meses = parseInt(document.getElementById("mes").value);
+                if(monto==''){ 
+                    alert('¡Debes ingresar un monto!');
+                    document.getElementById("sueldo").focus();
+                } else if(interes==''){
+                    alert("Debes ingresar el monto de interés");
+                    document.getElementById("interes").focus();
+                } else {
+                    val_ganancia = monto * 0.02 * meses;
+                    val_interes = parseInt(interes)/100;
+                }
+                val_formato = val_ganancia.toFixed(2); //Formateamos para que siempre tenga 2 decimales
+                document.getElementById("ganancia").innerHTML = val_formato;
+              
+            }
+        </script>
+    </head>
+    <body>
+        Sueldo: <input type="number" id="sueldo"/> <br/>
+        Interés mensual: <input type="number" id="intereses"/>% <br/>
+        Meses: 
+        <select id="mes">
+            <option value="1">1 mes</option>
+            <option value="6">6 meses</option>
+            <option value="12">12 meses</option value="6">
+            <option value="18">18 meses</option>
+            <option value="24">24 meses</option>
+            <option value="36">36 meses</option>
+        </select>
+        <br/>
+        Ganancia: S/. <span id="ganancia">0.00</span> <br/>
+        <input type="button" value="Calcular" onclick="calcular()"/>
+        <p id="razon"></p> 
+        <p id="total"></p> 
+    </body>
+</html>

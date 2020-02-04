@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Notas</title>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script src="notas.js"></script>
+</head>
+<body>
+<div>
+	<h4>Ingresar un nuevo alumno</h4>
+	<p>Nombres: <input id="nombre" type="text" /></p>
+	<button class="btnIngresar">Ingresar</button>
+</div>
+<table id="tblNotas">
+	<tr>
+		<th>Alumno</th>
+		<th>Nota</th>
+	</tr>
+	<tr>
+		<td id="alumno1">Jose Miranda</td>
+		<td><input type="number" id="nota1" /></td>
+	</tr>
+	<tr>
+		<td id="alumno2">Luis Ortega</td>
+		<td><input type="number" id="nota2" /></td>
+	</tr>
+	<tr>
+		<td id="alumno3">Melissa García</td>
+		<td><input type="number" id="nota3" /></td>
+	</tr>
+	<tr>
+		<td>Raquel Hidalgo</td>
+		<td><input type="number" id="nota4" /></td>
+	</tr>
+</table>
+<button class="btnProcesar">Procesar Datos</button>
+<h4>Estadísticas</h4>
+<p>Primer Puesto: <span id="puesto">0</span></p>
+<p>Promedio: <span id="promedio"> 0 </span></p>
+<p>Aprobados: <span id="aprobados"> 0 </span></p>
+<p>Desaprobados: <span id="desaprobados"> 0 </span></p>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hipotenusa</title>
+        <script type="text/javascript">
+            function calcular(){
+                c1 = document.getElementById("cat1").value;
+                c2 = document.getElementById("cat2").value;
+                c12 = parseInt(Math.pow(c1,2));
+                c22 = parseInt(Math.pow(c2,2));
+                c3 = c12+c22;
+                total = parseInt(Math.pow(c3,0.5));
+                respuesta = "El cateto mide "+total;
+                alert(respuesta);
+                mensaje ="El valor de la hipotenusa es <strong>"+total+"</strong>"
+                document.getElementById("respuesta").innerHTML = mensaje;
+            }
+        </script>
+    </head>
+    <body>
+        Cateto 1: <input type="text" id="cat1"/> <br/>
+        Cateto 2: <input type="text" id="cat2"/> <br/>
+        <input type="button" value="Calcular" onclick="calcular()"/>
+        <p id="respuesta"></p>
+    </body>
+</html>

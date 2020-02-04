@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    font-family: arial;
+    font-size: 14px;
+}
+
+#contenedor {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+#productos, #venta {
+    background: yellow;
+    padding: 10px;
+}
+
+#productos {
+    float: left;
+    width: 680px;
+}
+
+#venta {
+    float: right;
+    width: 400px;
+}

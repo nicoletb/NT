@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Pregunta</title>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script src="pregunta.js"></script>
+</head>
+
+<body>
+    <div id="intro">
+        <h2>¿Estás a favor de...?</h2>
+        <h3>Ingresar una nueva persona</h3>
+        <table>
+            <tr>
+                <td>Nombre: </td>
+                <td> <input type="text" id="nombre"/> <br/> </td>
+            </tr>
+            <tr>
+                <td>DNI: </td>
+                <td> <input type="number" id="dni" minlength="8"/> <br/> </td>
+            </tr>
+        </table>
+        <button class="ingresar">Ingresar</button> <br/>
+    </div>
+
+
+    <table id="tblNotas">
+        <tr>
+            <td>Nombre</td>
+            <td>DNI</td>
+            <td>Respuesta</td>
+        </tr>
+        <tr>
+            <td id="persona1">Juan</td>
+            <td>4324904</td>
+            <td>
+                <input type="text" id="respuesta1" minlength="8">
+            </td>
+        </tr>
+        <tr>
+            <td id="persona2">María</td>
+            <td>7893458</td>
+            <td>
+                <input type="text" id="respuesta2" minlength="8">
+            </td>
+        </tr>
+        <tr>
+            <td id="persona3">Pedro</td>
+            <td>7593456</td>
+            <td>
+                <input type="text" id="respuesta3" minlength="8">
+            </td>
+        </tr>
+        <tr>
+            <td id="persona4">Miguel</td>
+            <td>32276548</td>
+            <td>
+                <input type="text" id="respuesta4" minlength="8">
+            </td>
+        </tr>
+    </table>
+    <input type="button" class="procesar" value="Procesar datos"/>
+
+
+    <h3>Estadísticas</h3>
+    SÍ: <span id="si"></span>% <br/>
+    NO: <span id="no"></span>%
+</body>
+</html>

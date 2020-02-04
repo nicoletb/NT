@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1 - Javascript</title>
+
+    <script>
+    window.onload = function(){
+        texto = "";
+        cursos = ["Matemática", "Literatura", "Química", "Física", "Computación"];
+        notas = [13, 12, 11, 14, 20];
+        for(i=0;i<cursos.length;i++){
+            texto += cursos[i]+" => "+notas[i]+"<br/>";
+            console.log(cursos[i]+" => "+notas[i]);
+        }
+        document.getElementById("mensaje").innerHTML = texto;
+    }
+    </script>
+    
+</head>
+<body>
+<div id="mensaje"></div>    
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Ejercicio 8</title>
+        <script>
+            function comparar(){
+                a = parseInt(document.getElementById("a").value);
+                b = parseInt(document.getElementById("b").value);
+                if (a>b){
+                    alert("a es mayor a b")
+                } else if (a<b){
+                    alert("b es mayor a a")
+                } else if (b=a){
+                    alert("a y b son iguales")
+                }
+            }
+        </script>
+    </head>
+    <body>
+        Número a: <input type="number" id="a"/> <br/>
+        Número b: <input type="number" id="b"/> <br/>
+        <input type="button" value="Comparar" onclick="comparar()"/>
+        <p id="resultado"></p>
+    </body>
+</html>

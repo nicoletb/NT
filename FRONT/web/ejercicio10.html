@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Ejercicio 10</title>
+        <script>
+        function clasificar(){
+            clase = "";
+            ang = parseInt(document.getElementById("angulo").value);
+            if (ang==0){
+                clase = "Nulo"; 
+            }else if(0<ang && ang<90){
+                clase = "Agudo";
+            }else if(ang==90){
+                clase = "Recto";
+            }else if(90<ang && ang<180){
+                clase = "Obtuso"
+            }else if(ang==180){
+                clase = "Llano";
+            }else if(180<ang && ang<360){
+                clase = "Cóncavo";
+            }else if(ang==360){
+                clase = "Completo";
+            }else if(ang==""){
+                alert("¡Debes ingresar un ángulo!");
+                document.getElementById("angulo").value = "";
+                document.getElementById("angulo").focus();
+                document.getElementById("respuesta").style.display = "none";
+                return;
+            }else if(ang<0 || ang>360){
+                alert("¡Ángulo inválido!");
+                document.getElementById("angulo").value = "";
+                document.getElementById("angulo").focus();
+                document.getElementById("respuesta").style.display = "none";
+                return;
+            }
+            document.getElementById("respuesta").innerHTML = "Ángulo "+clase;   
+            return; 
+        }
+        </script>
+    </head>
+    <body>
+        Ingresa el valor de un ángulo: <br/>
+        <input type="number" id="angulo"/> ° <br/>
+        <input type="button" value="clasificar" onclick="clasificar()">
+        <p id="respuesta"></p>
+    </body>
+</html>
