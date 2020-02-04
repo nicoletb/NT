@@ -1,0 +1,17 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<hr>
+<table class="table table_bordered">
+   <tr>
+       <th>CODIGO</th>
+       <th>NOMBRE</th>
+   </tr>
+   {% for item in cursos %}
+    <tr>
+        <td>{{item.codcurso}}</td>
+        <td>{{item.curso}}</td>
+    </tr>
+   {% endfor %}
+</table>
+{% endblock %}
+
