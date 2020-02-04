@@ -1,0 +1,25 @@
+{% extends 'base/base.html' %}
+{% block content %}
+
+<!-- Intro -->
+<div class="intro">
+    <h2 id="categoria">Pedidos</h2>
+    <p id="desc_categoria">Complete el formulario para realizar su pedido.</p>
+</div>
+<!-- Formulario -->
+<div id="formulario">
+    <div id="form_contenido">
+        <input type="text" placeholder="Nombre"/> <br/>
+        <input type="email" placeholder="Correo electrónico"/> <br/>
+        {% for item in prod %}
+        <input type="checkbox"/>{{item.prod_nombre}}<br/></p>
+        {% endfor %}
+        Cantidad: <input type="number"/> <br/>
+        <input type="button" value="Enviar"/>
+
+    </div>
+    
+
+</div>
+
+{% endblock %}

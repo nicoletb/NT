@@ -1,0 +1,53 @@
+{% extends 'base/base.html' %}
+{% block content %}
+
+    <!-- Intro -->
+    <div class="intro">
+        <h2 id="categoria">Productos</h2>
+        <p id="desc_categoria">Nuestros productos</p>
+    </div>
+    <!-- Cards -->
+    <div id="card-area">
+        {% for item in prod %}
+        <div id="card_deck">
+            <div class="card">
+                <img class="foto" src="img/prueba.png"/>
+                <div class="container">
+                    <p class="nombre">{{item.prod_nombre}}</p>
+                    <p class="texto-mini">{{item.prod_det_mini}}</p>
+                    <button class="abrir">Ver más</button>
+                    <div class="modal">
+                        <div class="modal_contenido">
+                            <span class="cerrar">&times;</span>
+                            <p class="modal_titulo">{{item.prod_nombre}}</p>
+                            <p class="modal_txt">{{item.prod_det}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        <script>
+            var modal = document.querySelector(".modal");
+            var abrir = document.querySelector(".abrir");
+            var cerrar = document.querySelector(".cerrar");
+    
+            function toggleModal() {
+                modal.classList.toggle("show-modal");
+            }
+    
+            function windowOnClick(event) {
+                if (event.target === modal) {
+                    toggleModal();
+                }
+            }
+    
+            abrir.addEventListener("click", toggleModal);
+            cerrar.addEventListener("click", toggleModal);
+            window.addEventListener("click", windowOnClick);
+        </script>
+        </div>
+    </div>
+
+
+
+{% endblock %}

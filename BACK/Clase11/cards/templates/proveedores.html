@@ -1,0 +1,24 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<!-- <head>
+    <link type="text/css" rel="stylesheet" href="css/styles.css"/>
+</head> -->
+
+    <!-- Intro -->
+    <div class="intro">
+        <h2 id="categoria">Proveedores</h2>
+        <p id="desc_categoria">Nuestros proveedores</p>
+    </div>
+    <!-- Cards -->
+    {% for item in prov %}
+    <div id="card_deck">
+        <div class="card">
+            <img class="foto" src="img/prueba.png"/>
+            <div class="container">
+                <p class="nombre">{{item.prov_nombre}}</p>
+                <p class="texto-mini">{{item.prov_det_mini}}</p>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}

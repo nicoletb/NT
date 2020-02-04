@@ -1,0 +1,164 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Index */
+
+#index img {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: 0 20%;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Templates */
+
+.intro {
+    text-align: center;
+    background-color: #FFFFFF;
+    padding: 10%;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #3D3D3D;
+    width: 100%;
+    overflow: hidden;
+}
+
+.navbar a {
+    color: white;
+    text-align: center;
+    font-size: 17px;
+    text-decoration: none;
+    float: left;
+    padding: 14px 16px;
+}
+
+.navbar a:hover {
+    background-color: #5D5D5D;
+    position: fixed;
+}
+/* Navbar end */
+
+
+
+
+
+/* Card */
+#card-area {
+    background-color: #F8F9F8;
+    /* position: absolute;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: space-evenly; 
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 10% */
+    padding: 5%;
+}
+
+#card_deck {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    /* display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: auto;
+    grid-gap: 1rem; */
+}
+
+.card {
+    border: solid #5D5D5D 1px;
+    border-radius: 5px;
+    width: 27%;
+}
+
+.card img {
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+}
+
+.container {
+    padding: 5% 10% 10% 10%;
+    text-align: center;
+}
+
+.nombre {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.texto-mini {
+    font-size: 16px;
+}
+
+.boton {
+    margin: 0 auto;
+    display: block;
+    background-color: #46444a;
+    color: white;
+    padding: 7px 20px;
+    border: none;
+    border-radius: 3px;
+    margin-top: 30px;
+}
+/* End Card */
+
+
+/* Modal */
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.modal_contenido {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+}
+.cerrar {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+.cerrar:hover {
+    background-color: darkgray;
+}
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+#formulario {
+    margin: 5% 40%;
+}
